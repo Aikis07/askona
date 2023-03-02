@@ -2,7 +2,7 @@
   <div class="header">
     <a href="#">
       <div class="header__promo flex justify-center bg-promo-color">
-        <base-promotion />
+        <promotion-view />
       </div>
     </a>
     <div class="header__main mx-24">
@@ -102,7 +102,7 @@
         </div>
       </div>
     </div>
-    <swiper class="swiper pt-10"/>
+    <swiper :slides="slides" class="swiper pt-10" />
   </div>
 </template>
 
@@ -117,7 +117,6 @@ import Favourites from '@/assets/img/Favourites.svg';
 import Basket from '@/assets/img/Basket.svg';
 import MenuIcon from '@/assets/img/menu-icon.svg';
 import Sale from '@/assets/img/Sale.svg';
-import { mapState } from 'vuex';
 import Swiper from '@/components/Swiper.vue'
 
 export default {
@@ -134,13 +133,37 @@ export default {
     Sale,
     Swiper,
   },
+  props: {
+    basket: {
+      type: Array,
+    },
+  },
   data() {
     return {
-      isBasket: false
+      isBasket: false,
+      slides: [
+        {
+          id: 1,
+          name: 'slideone',
+        },
+        {
+          id: 2,
+          name: 'slidetwo',
+        },
+        {
+          id: 3,
+          name: 'slidethree',
+        },
+        {
+          id: 4,
+          name: 'slideone',
+        },
+        {
+          id: 5,
+          name: 'slidetwo',
+        }
+      ]
     }
-  },
-  computed: {
-    ...mapState(['basket'])
   },
   methods: {
     onClickBasket() {

@@ -41,9 +41,9 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex';
+import { mapMutations } from 'vuex';
 import Cross from '@/assets/img/cross.svg'
-import ProductIcon from '@/components/ProductIcon.vue';
+import ProductIcon from '~/components/BaseIcons/ProductIcon.vue';
 import Comparison from '@/assets/img/Comparison-icon.svg'
 import WhiteCross from '@/assets/img/white-cross.svg'
 
@@ -54,6 +54,11 @@ export default {
     Comparison,
     WhiteCross,
   },
+  props: {
+    basket: {
+      type: Array,
+    },
+  },
   data() {
     return {
       productValue: 1,
@@ -62,13 +67,10 @@ export default {
   computed: {
     checkProductValue() {
       if (this.productValue < 1) {
-        this.productValue = 1
-        return this.productValue
-      } else {
-        return this.productValue
+        this.productValue = 1;
       }
+      return this.productValue;
     },
-    ...mapState(['basket']),
     totalSum() {
       return this.basket.reduce((acc, val) => acc + val.price, 0)
     }

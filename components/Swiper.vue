@@ -1,19 +1,9 @@
 <template>
   <ssr-carousel show-dots :slides-per-page='3' :gutter='40' loop peek-left='110' peek-right='10'>
-    <div class="slide">
-      <slideone />
-    </div>
-    <div class="slide">
-      <slidetwo />
-    </div>
-    <div class="slide">
-      <slidethree />
-    </div>
-    <div class="slide">
-      <slideone />
-    </div>
-    <div class="slide">
-      <slidethree />
+    <div v-for='slide in slides' :key='slide.id' class="wrapper">
+      <div class="slide">
+        <component class="slide__component" :is="slide.name" />
+      </div>
     </div>
   </ssr-carousel>
 </template>
@@ -28,6 +18,11 @@ export default {
     slideone,
     slidetwo,
     slidethree,
+  },
+  props: {
+    slides: {
+      type: Array,
+    },
   },
 }
 </script>

@@ -16,25 +16,18 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
 import arrow from '@/assets/img/arrow.svg'
-import NavIcons from '@/components/NavIcons.vue'
+import NavIcons from '~/components/BaseIcons/NavIcons.vue'
 
 export default {
+  props: {
+    categories: {
+      type: Array,
+    },
+  },
   components: {
     arrow,
     NavIcons,
-  },
-  data() {
-    return {
-
-    };
-  },
-  computed: {
-    ...mapState(['categories']),
-  },
-  mounted () {
-    this.$store.dispatch('getCategories')
   },
 };
 </script>

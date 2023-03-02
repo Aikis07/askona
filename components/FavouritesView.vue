@@ -10,8 +10,7 @@
             <p class="product__price">от</p>
             <p class="product__price ml-1 text-promo-color text-xl">{{ product.price }}</p>
           </div>
-          <button @click="addProductToBasket(product)" class="add bg-promo-color px-5 py-2 text-white mt-3">Добавить в
-            корзину</button>
+          <add-basket :product="product"/>
         </div>
       </div>
     </div>
@@ -19,21 +18,18 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex';
-import ProductIcon from './ProductIcon.vue';
+import ProductIcon from './BaseIcons/ProductIcon.vue';
+import AddBasket from '@/components/UI/AddBasket.vue'
 
 export default {
+  props: {
+    products: {
+      type: Array,
+    },
+  },
   components: {
     ProductIcon,
-  },
-  computed: {
-    ...mapState(['products']),
-  },
-  methods: {
-    ...mapMutations(['addProductToBasket'])
-  },
-  mounted() {
-    this.$store.dispatch('getProducts')
+    AddBasket,
   },
 }
 </script>
