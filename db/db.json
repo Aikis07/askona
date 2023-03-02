@@ -1,0 +1,90 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Матрасы",
+      "event": "mattress"
+    },
+    {
+      "id": "2",
+      "name": "Подушки",
+      "event": "Pillows"
+    },
+    {
+      "id": "3",
+      "name": "Кровати",
+      "event": "Beds"
+    },
+    {
+      "id": "4",
+      "name": "Одеяло",
+      "event": "Blankets"
+    },
+    {
+      "id": "5",
+      "name": "Диваны",
+      "event": "Sofas"
+    },
+    {
+      "id": "6",
+      "name": "Мебель",
+      "event": "Furniture"
+    },
+    {
+      "id": "7",
+      "name": "Для дома",
+      "event": "ForHome"
+    },
+    {
+      "id": "8",
+      "name": "Кресла",
+      "event": "ArmChairs"
+    },
+    {
+      "id": "9",
+      "name": "Пуфы",
+      "event": "Poufs"
+    },
+    {
+      "id": "10",
+      "name": "Пледы",
+      "event": "Blank"
+    },
+    {
+      "id": "11",
+      "name": "Наматрасники",
+      "event": "Sheets"
+    },
+    {
+      "id": "12",
+      "name": "Постельное белье",
+      "event": "Covers"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Анатомический матрас Askona Benefit",
+      "event": "Mattress",
+      "price": 48900
+    },
+    {
+      "id": "2",
+      "name": "Анатомический матрас Askona Benefit",
+      "event": "Bed",
+      "price": 48900
+    },
+    {
+      "id": "3",
+      "name": "Анатомический матрас Askona Benefit",
+      "event": "mattress",
+      "price": 48900
+    },
+    {
+      "id": "4",
+      "name": "Анатомический матрас Askona Benefit",
+      "event": "BedOne",
+      "price": 48900
+    }
+  ]
+}

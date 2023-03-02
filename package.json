@@ -1,0 +1,35 @@
+{
+  "name": "askona",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "json:server": "json-server --watch db/db.json --port 3004"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "core-js": "^3.25.3",
+    "nuxt": "^2.15.8",
+    "nuxt-svg-loader": "^1.2.0",
+    "swiper": "^6.8.4",
+    "swiper-vue2": "^1.0.10",
+    "vue": "^2.7.10",
+    "vue-server-renderer": "^2.7.10",
+    "vue-ssr-carousel": "^1.9.1",
+    "vue-template-compiler": "^2.7.10"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^5.3.3",
+    "autoprefixer": "^10.4.13",
+    "json-server": "^0.17.2",
+    "postcss": "^8.4.21",
+    "sass": "^1.58.3",
+    "sass-loader": "^10.1.1",
+    "tailwindcss": "^3.2.7",
+    "webpack": "^4.46.0",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
